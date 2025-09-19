@@ -49,7 +49,7 @@ pip install -r requirements.txt
 
 ## Data
 - Sentinel-2 L2A imagery (Copernicus, open access). Use scripts or links in `docs/` to download filtered tiles for the AOI (southeastern Beijing).
-- Keep `data/` **out of git**. Add small tiles for demos if needed.
+- Keep `data/` **out of git**.
 
 ## Reproduce (outline)
 1. **Artificial degradation** (20m → 40m → SR back to 20m).
@@ -57,9 +57,21 @@ pip install -r requirements.txt
 3. Compute metrics (PSNR/SSIM/SAM/RMSE) under a shared protocol.
 4. Visualize qualitative differences for typical ROIs (urban blocks, water-street edges, airports).
 5. Apply best-performing method to multi-temporal analysis (RSEI/impervious).
+## Methods Implemented
+This project compares several super-resolution methods for Sentinel-2 imagery:
+
+| Method          | Language | Type           | Notes |
+|----------------|----------|----------------|-------|
+| Bicubic        | Python   | Interpolation  | Baseline |
+| PCA             | Python   | Statistical    | |
+| Brovey          | Python   | Statistical    | |
+| Random Forest   | Python   | Machine Learning | |
+| ATPRK           | MATLAB   | Geostatistical | |
+| **DSen2**       | External (Python) | Deep Learning | See [DSen2 repo](https://github.com/lanha/DSen2) |
+
+> **Note:**  
+> DSen2 code is **not included** in this repository.  
+> Please install it separately and follow their instructions.
 
 ## License
 MIT — see `LICENSE`.
-
-## Citation
-If you use parts of this repo or the results, please cite the thesis (Bachelor Thesis, Capital Normal University) and this repository.
