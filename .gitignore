@@ -1,0 +1,46 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+*.egg-info/
+.venv/
+venv/
+.env
+
+# Jupyter
+.ipynb_checkpoints/
+.notebooks_cache/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Build
+dist/
+build/
+
+# Data & Geospatial
+data/
+*.tif
+*.tiff
+*.jp2
+*.SAFE/
+*.h5
+*.hdf5
+*.nc
+*.zip
+
+# Logs
+logs/
+*.log
+
+# MATLAB
+*.asv
+*.mex*
+
+# Images (keep docs/images/)
+results/*.png
+results/*.jpg
+
+# VSCode
+.vscode/
